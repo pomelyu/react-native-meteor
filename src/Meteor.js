@@ -17,9 +17,6 @@ import MeteorComplexListView from './components/ComplexListView';
 import createContainer from './components/createContainer';
 import composeWithTracker from './components/composeWithTracker';
 
-import FSCollection from './CollectionFS/FSCollection';
-import FSCollectionImagesPreloader from './CollectionFS/FSCollectionImagesPreloader';
-
 import ReactiveDict from './ReactiveDict';
 
 import User from './user/User';
@@ -35,9 +32,7 @@ module.exports = {
   MeteorComplexListView,
   ReactiveDict,
   Collection,
-  FSCollectionImagesPreloader: Platform.OS == 'android' ? View : FSCollectionImagesPreloader,
   collection(name, options) { return new Collection(name, options) },
-  FSCollection,
   createContainer,
   getData() {
     return Data;
