@@ -1,6 +1,4 @@
 
-import { NetInfo, Platform, View } from 'react-native';
-
 import reactMixin from 'react-mixin';
 import Trackr from 'trackr';
 import EJSON from 'ejson';
@@ -12,8 +10,6 @@ import { Collection } from './Collection';
 import call from './Call';
 
 import Mixin from './components/Mixin';
-import MeteorListView from './components/ListView';
-import MeteorComplexListView from './components/ComplexListView';
 import createContainer from './components/createContainer';
 import composeWithTracker from './components/composeWithTracker';
 
@@ -28,8 +24,6 @@ module.exports = {
   Accounts,
   Tracker: Trackr,
   EJSON,
-  MeteorListView,
-  MeteorComplexListView,
   ReactiveDict,
   Collection,
   collection(name, options) { return new Collection(name, options) },
@@ -83,12 +77,9 @@ module.exports = {
       ...options
     });
 
-    NetInfo.isConnected.addEventListener('connectionChange', isConnected=>{
-      if(isConnected && Data.ddp.autoReconnect) {
-        Data.ddp.connect();
-      }
-    });
-
+    if(Data.ddp.autoReconnect) {
+      Data.ddp.connect();
+    }
 
     Data.ddp.on("connected", ()=>{
 
