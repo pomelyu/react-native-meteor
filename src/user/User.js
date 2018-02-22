@@ -1,4 +1,3 @@
-import { AsyncStorage } from 'react-native';
 
 import Data from '../Data';
 import { hashPassword } from '../../lib/utils';
@@ -31,7 +30,7 @@ module.exports = {
     });
   },
   handleLogout() {
-    AsyncStorage.removeItem(TOKEN_KEY);
+    localStorage.removeItem(TOKEN_KEY);
     Data._tokenIdSaved = null;
     this._userIdSaved = null;
   },
@@ -86,7 +85,7 @@ module.exports = {
   },
   _handleLoginCallback(err, result) {
     if(!err) {//save user id and token
-      AsyncStorage.setItem(TOKEN_KEY, result.token);
+      localStorage.setItem(TOKEN_KEY, result.token);
       Data._tokenIdSaved = result.token;
       this._userIdSaved = result.id;
       Data.notify('onLogin');
@@ -114,9 +113,9 @@ module.exports = {
   async _loadInitialUser() {
     var value = null;
     try {
-      value = await AsyncStorage.getItem(TOKEN_KEY);
+      value = localStorage.getItem(TOKEN_KEY);
     } catch (error) {
-      console.warn('AsyncStorage error: ' + error.message);
+      console.warn('localStorage error: ' + error.message);
     } finally {
       this._loginWithToken(value);
     }
