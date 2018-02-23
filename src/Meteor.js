@@ -12,6 +12,7 @@ import call from './Call';
 import Mixin from './components/Mixin';
 import createContainer from './components/createContainer';
 import composeWithTracker from './components/composeWithTracker';
+import withTracker from './components/withTracker';
 
 import ReactiveDict from './ReactiveDict';
 
@@ -28,6 +29,7 @@ module.exports = {
   Collection,
   collection(name, options) { return new Collection(name, options) },
   createContainer,
+  withTracker,
   getData() {
     return Data;
   },
