@@ -1,3 +1,3 @@
-import AccountsUIWrapper from './AccountsUIWrapper';
+import AccountsUIWrapperContainer from './AccountsUIWrapperContainer';
 
-export default AccountsUIWrapper;
+export default AccountsUIWrapperContainer;

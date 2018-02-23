@@ -7,7 +7,7 @@ const mapMeteorDataToProps = () => {
   return {
     tasks: Meteor.collection('tasks').find({}, { sort: { createdAt: -1 } }) || [],
     incompleteCount: Meteor.collection('tasks').find({ checked: { $ne: true } }).length,
-    currentUser: Meteor.user() || {},
+    currentUser: Meteor.user() || null,
   };
 };
 

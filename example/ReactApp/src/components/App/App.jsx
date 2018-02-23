@@ -43,7 +43,7 @@ class App extends React.Component {
     if (this.state.hideCompleted) {
       filteredTasks = filteredTasks.filter(task => !task.checked);
     }
-    const { _id: currentUserId } = this.props.currentUser;
+    const { _id: currentUserId } = this.props.currentUser || {};
     return filteredTasks.map((task) => {
       const showPrivateButton = task.owner === currentUserId;
       const { _id: taskId } = task;
@@ -104,7 +104,7 @@ App.propTypes = {
 
 App.defaultProps = {
   tasks: [],
-  currentUser: {},
+  currentUser: null,
   incompleteCount: 0,
 };
 
