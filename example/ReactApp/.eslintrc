@@ -1,0 +1,21 @@
+{
+	"extends": [
+		"react-app",
+		"airbnb"
+	],
+	"rules": {
+		"import/extensions": ["off", "never"],
+		"import/no-extraneous-dependencies": 0,
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+    "indent": ["error", 2],
+    "no-unused-vars": 1,
+    "no-console": 0,
+    "func-names": [1, "as-needed"],
+		"eol-last": ["error", "always"],
+		"jsx-a11y/anchor-is-valid": [ "error", {
+			"components": [ "Link" ],
+			"specialLink": [ "to" ],
+			"aspects": [ "noHref", "invalidHref", "preferButton" ]
+		}]
+	}
+}
