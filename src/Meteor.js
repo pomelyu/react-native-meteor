@@ -1,5 +1,3 @@
-
-import reactMixin from 'react-mixin';
 import Trackr from 'trackr';
 import EJSON from 'ejson';
 import DDP from '../lib/ddp.js';
@@ -9,9 +7,7 @@ import Data from './Data';
 import { Collection } from './Collection';
 import call from './Call';
 
-import Mixin from './components/Mixin';
 import createContainer from './components/createContainer';
-import composeWithTracker from './components/composeWithTracker';
 import withTracker from './components/withTracker';
 
 import ReactiveDict from './ReactiveDict';
@@ -21,7 +17,6 @@ import Accounts from './user/Accounts';
 
 
 module.exports = {
-  composeWithTracker,
   Accounts,
   Tracker: Trackr,
   EJSON,
@@ -32,9 +27,6 @@ module.exports = {
   withTracker,
   getData() {
     return Data;
-  },
-  connectMeteor(reactClass) {
-    return reactMixin.onClass(reactClass, Mixin);
   },
   ...User,
   status() {
