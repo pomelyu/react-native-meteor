@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@pomelyu/react-meteor-client": "file:../../dist",
     "classnames": "^2.2.5",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-meteor-client": "file:../../dist",
     "react-scripts": "1.1.1"
   },
   "scripts": {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Meteor from 'react-meteor-client';
+import Meteor from '@pomelyu/react-meteor-client';
 import classnames from 'classnames';
 
 // Task component - represents a single todo item

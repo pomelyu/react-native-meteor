@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Meteor from 'react-meteor-client';
+import Meteor from '@pomelyu/react-meteor-client';
 
 import styles from './AccountsUIWrapper.style';
 

@@ -1,4 +1,4 @@
-import Meteor, { createContainer } from 'react-meteor-client';
+import Meteor, { createContainer } from '@pomelyu/react-meteor-client';
 import AccountsComponent from './AccountsUIWrapper';
 
 const mapMeteorDataToProps = () => {
