@@ -25,7 +25,7 @@ export default createContainer(mapMeteorDataToProps, App);
 ```bash
 # Build this package
 npm install
-npm run build-package # Do not use 'npm run build'
+npm run build
 
 # Meteor server side (official todos example)
 cd example/MeteorApp

@@ -1,14 +1,13 @@
 {
   "name": "@pomelyu/react-meteor-client",
-  "version": "1.2.1",
+  "version": "1.2.4",
   "description": "Full Meteor Client for React",
   "main": "src/Meteor.js",
   "scripts": {
-    "prebuild-package": "rimraf dist",
-    "build-package": "babel index.js -d dist && babel src -d dist/src && babel lib -d dist/lib && cp package.json LICENSE README.md dist",
-    "build": "npm run build-package",
-    "postbuild": "cp index.build.js index.js && rimraf index.build.js .babelrc .jshintrc src lib",
-    "test": "mocha --compilers js:babel-core/register --require test/setup --recursive"
+    "prebuild": "rimraf dist",
+    "build": "babel index.js -d dist && babel src -d dist/src && babel lib -d dist/lib && cp package.json LICENSE README.md dist",
+    "prepublish": "npm run build && mv index.js index.backup.js && cp index.package.js index.js && mv src src.backup",
+    "postpublish": "cp index.backup.js index.js && mv src.backup src && rimraf index.backup.js"
   },
   "repository": {
     "type": "git",
