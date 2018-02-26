@@ -1,6 +1,6 @@
 {
   "name": "@pomelyu/react-meteor-client",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Full Meteor Client for React",
   "main": "src/Meteor.js",
   "scripts": {

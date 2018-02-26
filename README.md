@@ -25,15 +25,15 @@ export default createContainer(mapMeteorDataToProps, App);
 ```bash
 # Build this package
 npm install
-npm run build
+npm run build-package # Do not use 'npm run build'
 
 # Meteor server side (official todos example)
 cd example/MeteorApp
 meteor npm install
-meteor npm start # meteor would run at localhost:3333
+meteor npm start # meteor run at localhost:3333
 
 # React client side
 cd example ReactApp
 npm install
-npm start # create-react-app would run at localhost:3000
+npm start # react-app run at localhost:3000
 ```
