@@ -27,6 +27,10 @@ export default createContainer(mapMeteorDataToProps, App);
 npm install
 npm run build
 
+# Publish (After build)
+cd dist
+npm publish
+
 # Meteor server side (official todos example)
 cd example/MeteorApp
 meteor npm install
